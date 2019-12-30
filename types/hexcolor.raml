@@ -1,5 +1,7 @@
 type: string
 displayName: HexColor
-description: Hexidecimal (web-style) color representation
-pattern: "#[0-9A-Fa-f]{6}"
-example: "#FF0033"
+description: A Hexadecimal (web-style) color representation, either RGB (six digits) or RGBA (eight digits).
+pattern: "#(?<R>[0-9A-Fa-f]{2})(?<G>[0-9A-Fa-f]{2})(?<B>[0-9A-Fa-f]{2})(?<A>[0-9A-Fa-f]{2})?"
+examples:
+    RGB: "#FF0033"
+    RGBA: "#FF003327"

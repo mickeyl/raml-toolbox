@@ -1,0 +1,50 @@
+#%RAML 1.0
+title: RAML-Toolbox Test Document
+version: 1
+protocols: [ HTTPS ]
+securedBy: HTTPBasicAuth
+baseUri: https://foo.bar.baz/{version}
+mediaType: application/json
+documentation:
+  - title: RAML-Toolbox Test Document
+    content: |
+
+      # Introduction #
+
+      ... to be written ...
+
+      # About this document #
+
+      This document describes an interface to communicate between a server and a (mobile) client.
+
+      Source of this documentation is a RAML text file conforming to [RAML-1.0](http://raml.org/spec.html).
+
+      ## Authors ##
+
+      - [Dr. Michael Lauer](mailto://mickey@vanille.de).
+
+      ## Document Version ##
+
+      2020.01.01.1 – API Level 1
+
+      ## State ##
+
+      ALPHA.
+#
+# SECURITY
+#
+securitySchemes:
+  HTTPBasicAuth:
+    type: Basic Authentication
+
+#
+# TYPES
+#
+uses:
+  raml-toolbox: types/types.raml
+
+/myresource:
+  post:
+    body:
+      application/json:
+        type: raml-toolbox.HexColor
