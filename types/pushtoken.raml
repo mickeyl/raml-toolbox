@@ -1,8 +1,11 @@
 type: string
 displayName: DevicePushToken
+pattern: (APPLE|GOOGLE)-(SANDBOX|PRODUCTION)-[a-zA-Z0-9\-_]+
 description: |
-    A mobile device PUSH token, usually a three tuple <VENDOR>-<ENVIRONMENT>-<ID>:
-    * VENDOR is the operating system vendor, e.g. APPLE or GOOGLE,
-    * ENVIRONMENT is the push environment, e.g. SANDOX, or PRODUCTION,
-    * ID is the actual token data.    
-example: APPLE-PRODUCTION-1234567890
+    A mobile device PUSH token delieverd as three tuple <VENDOR>-<ENVIRONMENT>-<ID>:
+    * VENDOR is the operating system vendor
+    * ENVIRONMENT is the push environment
+    * ID is the actual token data. The format varies.
+examples:
+    APPLE: APPLE-PRODUCTION-03df25c845d460bcdad7802d2vf6fc1dfde97283bf75cc993eb6dca835ea2e2f
+    GOOGLE: GOOGLE-SANDBOX-APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq
