@@ -1,0 +1,15 @@
+#%RAML 1.0 ObjectTypeDeclaration
+type: object
+description: |
+  A `key`->`value` mapping object (KVMO).
+
+  KVMO are often used to map programmatic keys to user strings values.
+properties:
+  key:
+    type: string
+    description: The key.
+    required: true
+  value:
+    type: string
+    description: The value.
+    required: true
